@@ -1,4 +1,4 @@
-import {collection,addDoc, getDocs} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import {collection, addDoc, getDocs, doc, updateDoc} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { db } from "./firebase.js";
 
 export const registrarPersona = async(persona)=>{
@@ -13,9 +13,14 @@ export const obtenerPersonas = async()=>{
     console.log(quearySnap);
     let listado = []
     quearySnap.forEach(doc => {
-        console.log(doc.id);
-        console.log(doc.data());
-        listado.push(doc.data());
+        //console.log(doc.id);
+        //console.log(doc.data());
+        listado.push({...doc.data(),id:doc.id});   //Se agregó un id a los objetos.
     });
     return listado;
+}
+
+export const actualizarPersona = async(objeto,id)=>{
+    const ref = doc(db,"persona",id);
+    await updateDoc(ref,objeto);
 }

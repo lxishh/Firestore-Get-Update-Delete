@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="boxdiv"> 
-        <form> 
+        <!-- <form>  -->
 
             <label for="nombre">Ingresa tu nombre</label>
             <input type="text" id="nombre" placeholder="Ingresa tu nombre" name="nombre">
@@ -27,6 +27,9 @@
 
             <label for="correo">Ingresa tu correo</label>
             <input type="email" id="correo" placeholder="Ingresa tu correo" name="correo">
+            
+            <label for="edad">Ingresa tu edad</label>
+            <input type="text" id="edad" placeholder="Ingresa tu edad" name="edad">
 
             <button type="button" id="btnRegistrar">Registrar</button>
 
@@ -43,8 +46,28 @@
                 </thead>
                 <tbody id="tbDatos"></tbody>
             </table>
+            
+            <label>Nombre</label>
+            <input type="text" id="UPDnombre" placeholder="Ingresa tu nombre" name="nombre">
 
-        </form>
+            <label>Apellido</label>
+            <input type="text" id="UPDapellido" placeholder="ingresa tu apellido" name="apellido">
+
+            <label>Fecha de nacimiento</label>
+            <input type="date" id="UPDfecha_nacimiento" placeholder="Ingresa tu fecha de nacimiento" name="fecha_nacimiento">
+
+            <label>Rut</label>
+            <input type="text" id="UPDrut" placeholder="Ingresa tu rut" name="rut">
+            
+            <label>Correo</label>
+            <input type="email" id="UPDcorreo" placeholder="Ingresa tu correo" name="correo">
+
+            <label>Edad</label>
+            <input type="text" id =UPDedad" placeholder="Ingresa tu edad" name="edad">
+
+            <button id="btnActualizar" type="button">Actualizar</button>
+
+        <!-- </form> -->
     </div>
 </body>
 </html>
