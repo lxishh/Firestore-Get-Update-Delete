@@ -1,0 +1,30 @@
+body{
+    background-color: antiquewhite;
+}
+
+div{
+    text-align: center;
+}
+
+label{
+    display: block;
+}
+
+input{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+form{
+    margin: auto;
+    width: 50%;
+    background-color: burlywood;
+}
+
+button{
+    margin: auto;
+    margin-top: 5px;
+    width: 20%;
+    display: block;
+}

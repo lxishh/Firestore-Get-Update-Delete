@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="module" src="assets/js/firebase.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+    <!-- Debe ser type = module (cuándo son importaciones/exportaciones) -->
+</head>
+<body>
+    <div class="boxdiv"> 
+        <form> 
+
+            <label for="nombre">Ingresa tu nombre</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre" name="nombre">
+            
+            <label for="apellido">Ingresa tu apellido</label>
+            <input type="text" id="apellido" placeholder="Ingresa tu apellido" name="apellido">
+
+            <label for="fnacimiento">Ingresa tu fecha de nacimiento</label>
+            <input type="date" id="fnacimiento" placeholder="Ingresa tu fecha de nacimiento" name="fnacimiento">
+
+            <label for="rut">Ingresa tu rut</label>
+            <input type="text" id="rut" placeholder="Ingresa tu rut" name="rut">
+
+            <label for="correo">Ingresa tu correo</label>
+            <input type="email" id="correo" placeholder="Ingresa tu correo" name="correo">
+
+            <button type="button" id="btnRegistrar">Registrar</button>
+
+        </form>
+    </div>
+</body>
+</html>
