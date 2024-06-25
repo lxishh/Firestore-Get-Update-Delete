@@ -57,7 +57,7 @@ const cargarDatos = ()=>{
             botonUPD.addEventListener("click",()=>{
                 let enombre = document.getElementById("UPDnombre");
                 let eapellido = document.getElementById("UPDapellido");
-                let efechanac = document.getElementById("UPDfecha_nacimiento");     //CUIDADO CON EL NOMBRE DE LA VARIABLE; DEBO USAR FNACIMIENTO
+                let eNacimiento = document.getElementById("UPDfnacimiento");     //CUIDADO CON EL NOMBRE DE LA VARIABLE; DEBO USAR FNACIMIENTO
                 let erut = document.getElementById("UPDrut");
                 let ecorreo = document.getElementById("UPDcorreo");
                 let eedad = document.getElementById("UPDedad");
@@ -65,7 +65,7 @@ const cargarDatos = ()=>{
                 eapellido.value = persona.apellido;
                 erut.value = persona.rut;
                 ecorreo.value = persona.correo;
-                efechanac.value = persona.fechaNacimiento;
+                eNacimiento.value = persona.fnacimiento;
                 eedad.value = persona.edad;
                 document.getElementById("btnActualizar").value = persona.id;
             })
@@ -90,7 +90,7 @@ const actualizar = ()=>{
     let vEdad = eEdad.value;
     // Crear un objeto
     let objeto = {nombre:vNombre, apellido:vApellido, fnacimiento:vNacimiento, rut:vRut, correo:vCorreo, edad:vEdad};
-    let id = document.getElementById("btnActualizar"),value;
+    let id = document.getElementById("btnActualizar").value;
     console.log(objeto);
     actualizarPersona(objeto,id).then(()=>{
         alert("Se ha actualizado con éxito");
