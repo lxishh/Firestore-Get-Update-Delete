@@ -1,4 +1,4 @@
-import { actualizarPersona, obtenerPersonas, registrarPersona } from "./promesas.js";
+import { actualizarPersona, eliminarPersona, obtenerPersonas, registrarPersona } from "./promesas.js";
 
 window.addEventListener("load",()=>{
     document.getElementById("btnRegistrar").addEventListener("click",registrar);
@@ -47,7 +47,7 @@ const cargarDatos = ()=>{
             estructura += "<td>" + persona.fnacimiento + "<td>"
             estructura += "<td>" + persona.edad + "<td>"
             estructura += "<td> <button id='UPD"+persona.id+"'>Actualizar</button></td>"; //Botón UPDATE
-            estructura += "<td> <button id='DEL'"+persona.id+"'>Eliminar</button></td>";  //Botón DELETE
+            estructura += "<td> <button id='DEL"+persona.id+"'>Eliminar</button></td>";  //Botón DELETE
             estructura += "<tr>"
         });
         document.getElementById("tbDatos").innerHTML = estructura;
@@ -68,6 +68,16 @@ const cargarDatos = ()=>{
                 eNacimiento.value = persona.fnacimiento;
                 eedad.value = persona.edad;
                 document.getElementById("btnActualizar").value = persona.id;
+            })
+
+            let botonDEL = document.getElementById("DEL"+persona.id);
+            botonDEL.addEventListener("click", ()=>{
+                if (confirm("Esta seguro que desea eliminar a:\n"+persona.nombre+"")){
+                    eliminarPersona(persona.id).then(()=>{
+                        alert("Eliminado con exito");
+                        cargarDatos();
+                    })
+                }
             })
         })
     });
